@@ -1,0 +1,126 @@
+:root {
+    --primary-blue: #1F3C88;
+    --accent-teal: #00ADB5;
+    --accent-orange: #FF6B35;
+    --light-bg: #F8F9FA;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Typography */
+.section-title {
+    font-weight: 700;
+    color: var(--primary-blue);
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--accent-teal);
+    border-radius: 2px;
+}
+
+/* Header */
+.navbar-brand .logo-placeholder {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-blue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.btn-orange {
+    background-color: var(--accent-orange);
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-orange:hover {
+    background-color: #e55a2b;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Hero */
+.hero-section {
+    height: 80vh;
+    background: linear-gradient(rgba(31, 60, 136, 0.8), rgba(31, 60, 136, 0.8)), 
+                url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Initiative Cards */
+.initiative-card {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+}
+
+.initiative-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: var(--light-bg);
+    color: var(--primary-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+/* Contact & FAQ */
+.accordion-button:not(.collapsed) {
+    background-color: var(--light-bg);
+    color: var(--primary-blue);
+}
+
+/* Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    z-index: 1000;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    .hero-section h1 { font-size: 1.8rem; }
+    .brand-text { font-size: 1.1rem; }
+}
